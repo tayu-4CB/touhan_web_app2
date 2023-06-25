@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="script/main.js"></script>
     <title>登録販売者過去問ドリル</title>
@@ -12,10 +12,37 @@
 
 <body>
     <header id="header_wrap" class="centering_box">
-        <div id="header" class="centering_content">
-            <a href="index.html">
-                <img src="img/title_logo_tmp.png" alt="登録販売者過去問ドリル" id="title_logo">
-            </a>
+        <div id="navi_belt" class="centering_content">
+            <div id="title">
+                <a href="index.html" class="page_title">
+                    <img src="img/page_title.png" alt="登録販売者過去問ドリル" id="page_title" class="page_title">
+                </a>
+            </div>
+            <div class="header_list">
+                <button id="login_button" onclick="show_login_form()">
+                    <span id="userid">
+                        ログイン
+                    </span>
+                </button>
+                <div id="user_panel" class  style="visibility: hidden;">
+                    <div id="form_title">アカウントにログイン</div>
+                    <form id="login_form">
+                        <div class="input_wrap">
+                            <input type="text" name="userid" placeholder="ユーザーID">
+                        </div>
+                        <div class="input_wrap">
+                            <input type="password" name="password" placeholder="パスワード">
+                        </div>
+                        <div>
+                            <input type="submit" value="ログイン" name="login">
+                        </div>
+                        <button id="new_resist">
+                            +新規登録
+                        </button>
+                    </form>
+                </div>
+                <img id="menu_button" src="img/menu_button3.png" alt="=" onclick="show_menu()">
+            </div>    
         </div>
     </header>
 
