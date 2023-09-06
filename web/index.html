@@ -41,12 +41,179 @@
                         </button>
                     </form>
                 </div>
-                <img id="menu_button" src="img/menu_button3.png" alt="=" onclick="show_menu()">
+                <!-- <img id="menu_button" src="img/menu_button3.png" alt="=" onclick="show_menu()"> -->
             </div>    
         </div>
     </header>
 
-    <main>
+    <main class="page">
+        <div class="pan">
+            <a href="index.html">登録販売者ドリル</a> 
+        </div>
+
+        <div id="explanation">「登録販売者ドリル」は、登録販売者過去問（関西広域連合）の中からランダムに出題するweb問題集です。隙間時間を活用して、試験に合格しましょう！
+        </div>
+
+        <div class="exam">
+            <div id="question_choice">
+                <ul class="tabs">
+                    <li  class="tab is_active for_pc" id="tab1" onclick="tabSwitch()">
+                        年度を指定
+                    </li>
+                    <li class="tab for_pc" id="tab2" onclick="tabSwitch()">
+                        章を指定
+                    </li>
+                    <li  class="tab" id="tab3" onclick="tabSwitch()">
+                        模擬試験
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel is_show" id="panel_annual">
+                <div class="selec_box1" id="selec_box_R4">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和４年</span>
+                    </label> 
+                </div>
+                <div class="selec_box1" id="selec_box_R3">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和３年</span>
+                    </label> 
+                </div>
+                <div class="selec_box1" id="selec_box_R2">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和２年</span> 
+                    </label>
+                </div>
+                <div class="selec_box1" id="selec_box_R1">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和１年</span>
+                    </label> 
+                </div>
+                <div class="selec_box1" id="selec_box_H30">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成３０年</span>
+                    </label> 
+                </div>
+                <div class="selec_box1" id="selec_box_H29">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成２９年</span>
+                    </label> 
+                </div>
+                <div class="selec_box1" id="selec_box_H28">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成２８年</span>
+                    </label> 
+                </div>
+                <div class="selec_box1" id="selec_box_H27">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成２７年</span>
+                    </label> 
+                </div>
+
+                <div class="selecter_explanation" id="selecter_explanation1_sentence">
+                    チェックされた年度の過去問からランダムに出題します
+                </div>
+            </div>
+
+            <div class="panel" id="panel_chapter">
+                <div class="selec_box2" id="selec_box_R4">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="Ch1"><span>１章：医薬品に共通する特性と基本的な知識</span>
+                    </label> 
+                </div>
+                <div class="selec_box2" id="selec_box_R3">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="Ch2"><span>２章：人体の働きと医薬品</span>
+                    </label> 
+                </div>
+                <div class="selec_box2" id="selec_box_R2">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="Ch3"><span>３章：主な医薬品とその作用</span>
+                    </label> 
+                </div>
+                <div class="selec_box2" id="selec_box_R1">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="Ch4"><span>４章：薬事関係法規・制度</span>
+                    </label> 
+                </div>
+                <div class="selec_box2" id="selec_box_H30">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="Ch5"><span>５章：医薬品の適正使用・安全対策</span>
+                    </label> 
+                </div>
+
+                <div class="selecter_explanation" id="selecter_explanation2_sentence">
+                    チェックされた章の過去問からランダムに出題します
+                </div>
+            </div>
+
+            <div class="panel" id="panel_model">
+                <div class="selec_box3" id="selec_box_ER4">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和４年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_ER3">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和３年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_ER2">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和２年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_ER1">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>令和１年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_EH30">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成３０年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_EH29">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成２９年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_EH28">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成２８年</span>
+                    </label> 
+                </div>
+                <div class="selec_box3" id="selec_box_EH27">
+                    <label>
+                        <input type="checkbox" name="" class="selecter" id="R4"><span>平成２７年</span>
+                    </label> 
+                </div>
+
+                <div class="selecter_explanation" id="selecter_explanation3_sentence">
+                    チェックされた年度の過去問から模擬試験を作成します
+                </div>
+            </div>
+
+            <div id="check_all_box">
+                <div id="check_all_text">
+                    全て選択
+                </div>
+                <input type="button" onclick="check_all(true)" value="ON" id="check_all_button_on">
+                <input type="button" onclick="check_all(false)" value="OFF" id="check_all_button_off">
+            </div>
+
+        </div>
+
+        <a href="Here is jump page" id="start_link">
+            <div id="start_box">
+                <div id="start_box_ch">
+                    <div id="start_box_sentence">出題開始</div>
+                    <img src="img/yajirusi_right.png" alt="" id="img_yajirusi_right">    
+                </div>
+            </div>
+        </a>
+
 
     </main>
     <footer>

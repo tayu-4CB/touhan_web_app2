@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    color: #333333;
+    font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
 header{
     width: 100%;
     display: flex;
@@ -41,6 +48,7 @@ header{
 
 #user_panel{
     visibility: hidden;
+    z-index: 10;
 }
 
 
@@ -117,4 +125,217 @@ header{
         width: auto;
         float: center;
     }
+
+
 }
+
+body{
+    
+}
+
+.page {
+
+    position: relative;
+    width: 55%;
+    min-width: 700px;
+    max-width: 1000px;
+    padding: 0 5vh;
+    margin: 5vh auto 10vh;
+}
+
+@media screen and (max-width : 768px){
+
+    .page {
+        width: 90%;
+        min-width: auto;
+        padding: 0;
+    }
+
+}
+
+.pan a{
+    color: silver;
+}
+
+@media screen and (max-width : 768px){
+    .pan a{
+        font-size: 12px;
+    }
+}
+
+#explanation{
+    display: flex;
+    margin: 15px;
+    font-size: 15px;
+}
+
+@media screen and (max-width : 768px){
+    #explanation{
+        font-size: 14px;
+    }
+}
+
+#question_choice{
+    display: flex;
+    width: 100%;
+}
+
+#question_choice2{
+    display: none;
+}
+
+ul{
+    display: flex;
+    margin: 35px auto 0px auto;
+    width: 100%;
+    padding: 0px;
+}
+
+.tab{
+    height: 100%;
+    width: 100%;
+    display: list-item;
+    text-align: center;
+    list-style: none;
+    font-size: 21px;
+    color: silver;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border-bottom: solid 4px silver;
+}
+
+@media screen and (max-width : 768px){
+    .tab{
+        font-size: 16px;
+    }
+}
+
+
+.tab:hover{
+    border-bottom: solid 4px #b5e9f7e4;
+}
+
+#tab2{
+    border-right: solid 1px silver;
+    border-left: solid 1px silver;
+}
+
+.is_active{
+    color: #00B0F0;
+    border-bottom: solid 4px #00B0F0;
+}
+
+.panel{
+    display: none;
+
+}
+
+.is_show{
+    display: flex;
+    justify-content: flex-start;
+    margin: 25px 15px 0px 15px;
+    flex-wrap: wrap;
+
+}
+
+.selecter{
+    margin: 10px;
+}
+
+.selec_box1{
+    margin: 10px 10px;
+    width: 120px;
+    border: solid 1px silver;
+    border-bottom: solid 2px #a9a9a9;
+    border-right: solid 2px #a9a9a9;
+}
+
+.selec_box1 label{
+    cursor: pointer;
+}
+
+.selec_box2{
+    margin: 10px 10px;
+    width: 100%;
+    border: solid 1px silver;
+    border-bottom: solid 2px #a9a9a9;
+    border-right: solid 2px #a9a9a9;
+}
+
+.selec_box2 label{
+    cursor: pointer;
+}
+
+@media screen and (max-width : 768px) {
+    .selec_box2{
+        font-size: 12px;
+    }
+}
+
+.selec_box3{
+    margin: 10px 10px;
+    width: 120px;
+    border: solid 1px silver;
+    border-bottom: solid 2px #a9a9a9;
+    border-right: solid 2px #a9a9a9;
+}
+
+.selec_box3 label{
+    cursor: pointer;
+}
+
+.selecter_explanation{
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#check_all_box{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 23px;
+}
+
+#check_all_button_on{
+    margin: 0px 5px 0px 10px;
+}
+
+#start_link{
+    text-decoration: none;
+}
+
+#start_box{
+    margin: 46px auto;
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    width: 120px;
+    font-size: 21px;
+    text-decoration: none;
+    background-color: #00B0F0;
+    text-align: center;
+    padding-top: 0.54px;
+    padding-left: 3.4px;
+    border: #00B0F0;
+}
+
+#start_box:hover{
+    cursor: pointer;
+    text-decoration: underline solid 1px #fff;
+}
+
+#start_box_ch{
+    display: flex;
+    justify-content: center;
+}
+
+#start_box_sentence{
+    color: #fff;
+}
+
+#img_yajirusi_right{
+    height: 57%;
+    margin: auto;
+}
+
+
